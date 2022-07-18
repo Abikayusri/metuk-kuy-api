@@ -1,0 +1,10 @@
+package abika.sinau.metukkuyapi.user.entity
+
+data class UserRequest(
+        val username: String,
+        val password: String
+) {
+    fun mapToNewUser(): User {
+        return User.createNewUser(username, password)
+    }
+}
