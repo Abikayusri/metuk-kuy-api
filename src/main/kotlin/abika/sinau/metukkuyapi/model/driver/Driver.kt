@@ -1,5 +1,6 @@
 package abika.sinau.metukkuyapi.model.driver
 
+import abika.sinau.metukkuyapi.utils.Constant.DRIVER_ROLE_ID
 import java.util.*
 
 data class Driver(
@@ -10,7 +11,8 @@ data class Driver(
         var address: String = "",
         var numberPlate: String = "",
         var vehicleYear: Int = 0,
-        var phoneNumber: String = ""
+        var phoneNumber: String = "",
+        var role: Int = DRIVER_ROLE_ID
 ) {
     companion object {
         fun createNewCustomer(
@@ -30,7 +32,8 @@ data class Driver(
                     address = address,
                     numberPlate = numberPlate,
                     vehicleYear = vehicleYear,
-                    phoneNumber = phoneNumber
+                    phoneNumber = phoneNumber,
+                    role = DRIVER_ROLE_ID
             )
         }
     }

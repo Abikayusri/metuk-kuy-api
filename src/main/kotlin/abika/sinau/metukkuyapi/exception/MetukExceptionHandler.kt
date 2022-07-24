@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler
 
 @ControllerAdvice
-class MetukExceptionHandler: ResponseEntityExceptionHandler() {
+class MetukExceptionHandler : ResponseEntityExceptionHandler() {
 
     @ExceptionHandler(value = [MetukException::class])
     fun handleThrowable(throwable: MetukException): ResponseEntity<BaseResponse<Empty>> {

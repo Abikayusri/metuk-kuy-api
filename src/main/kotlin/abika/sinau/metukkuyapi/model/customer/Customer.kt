@@ -1,5 +1,6 @@
 package abika.sinau.metukkuyapi.model.customer
 
+import abika.sinau.metukkuyapi.utils.Constant.CUSTOMER_ROLE_ID
 import java.util.*
 
 data class Customer(
@@ -8,7 +9,8 @@ data class Customer(
         var password: String = "",
         var email: String = "",
         var address: String = "",
-        var phoneNumber: String = ""
+        var phoneNumber: String = "",
+        var role: Int = CUSTOMER_ROLE_ID
 ) {
     companion object {
         fun createNewCustomer(
@@ -16,7 +18,7 @@ data class Customer(
                 password: String,
                 email: String,
                 address: String,
-                phoneNumber: String
+                phoneNumber: String,
         ): Customer {
             return Customer(
                     id = UUID.randomUUID().toString(),
@@ -24,7 +26,8 @@ data class Customer(
                     password = password,
                     email = email,
                     address = address,
-                    phoneNumber = phoneNumber
+                    phoneNumber = phoneNumber,
+                    role = CUSTOMER_ROLE_ID
             )
         }
     }

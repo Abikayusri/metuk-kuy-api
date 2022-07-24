@@ -1,6 +1,6 @@
 package abika.sinau.metukkuyapi.model.driver
 
 data class DriverLogin(
-        var username: String,
+        var noPlate: String,
         var password: String
 )
